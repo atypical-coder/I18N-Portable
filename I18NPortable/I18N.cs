@@ -170,6 +170,20 @@ namespace I18NPortable
             return this;
         }
 
+        public II18N AddProvider(ILocaleProvider provider)
+        {
+            if (_providers.Any(x => x == provider))
+                throw new I18NException(ErrorMessages.ProviderTwice);
+
+            provider
+                .SetLogger(Log)
+                .Init();
+
+            _providers.Add(provider);
+
+            return this;
+        }
+
         /// <summary>
         /// Call this when your app starts
         /// ie: <code>I18N.Current.Init(GetType().GetTypeInfo().Assembly);</code>
@@ -184,15 +198,13 @@ namespace I18NPortable
 
             var knownFileExtensions = _readers.Select(x => x.Item2);
 
-            foreach (var provider in _providers)
+            if (_providers.First() is EmbeddedResourceProvider)
             {
-                provider.Dispose();
-            }
+                foreach (var provider in _providers)
+                {
+                    provider.Dispose();
+                }
 
-            _providers.Clear(); // temporal until other providers are implemented
-
-            if (_providers.FirstOrDefault(x => x is EmbeddedResourceProvider) == null)
-            {
                 var resourcesFolder = _resourcesFolder ?? "Locales";
                 var defaultProvider = new EmbeddedResourceProvider(hostAssembly, resourcesFolder, knownFileExtensions)
                     .SetLogger(Log)
