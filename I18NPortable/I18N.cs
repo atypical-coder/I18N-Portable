@@ -185,6 +185,19 @@ namespace I18NPortable
         }
 
         /// <summary>
+        /// Reloads the current locale
+        /// </summary>
+        public II18N Reload()
+        {
+            LoadLocale(_locale);
+
+            NotifyPropertyChanged(nameof(Locale));
+            NotifyPropertyChanged(nameof(Language));
+
+            return this;
+        }
+
+        /// <summary>
         /// Call this when your app starts
         /// ie: <code>I18N.Current.Init(GetType().GetTypeInfo().Assembly);</code>
         /// </summary>
