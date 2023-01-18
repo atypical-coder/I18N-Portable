@@ -2,6 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <PackageId>I18nPortable.JsonReader.ATC</PackageId>
     <Version>1.0.1</Version>
     <Authors>Diego Ponce de Leon, Daniel Galvão</Authors>
     <Company>atypical-coder</Company>

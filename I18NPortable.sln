@@ -10,15 +10,16 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		LICENSE = LICENSE
 		README.md = README.md
 		.gitignore = .gitignore
+		nuget.config = nuget.config
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{0BBF8AE8-5D51-4835-A072-64B5C7562DB3}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "I18NPortable", "I18NPortable\I18NPortable.csproj", "{4DC53C6B-9F4B-4168-80C9-5D6C8849892E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "I18NPortable", "I18NPortable\I18NPortable.csproj", "{4DC53C6B-9F4B-4168-80C9-5D6C8849892E}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestHostAssembly", "TestHostAssembly\TestHostAssembly.csproj", "{0133FCC2-A9EC-4DEC-B43E-F0B0F136BFFA}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "I18NPortable.JsonReader", "I18NPortable.JsonReader\I18NPortable.JsonReader.csproj", "{FE719A18-689B-4239-9BD2-58C45719B6CB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "I18NPortable.JsonReader", "I18NPortable.JsonReader\I18NPortable.JsonReader.csproj", "{FE719A18-689B-4239-9BD2-58C45719B6CB}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "I18NPortable.UnitTests", "I18NPortable.UnitTests\I18NPortable.UnitTests.csproj", "{9D7A766A-E8AB-495C-A2C4-14984F7D925E}"
 EndProject
