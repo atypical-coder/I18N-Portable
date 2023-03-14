@@ -3,7 +3,7 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <PackageId>I18nPortable.ATC</PackageId>
-    <Version>1.0.2</Version>
+    <Version>1.0.3</Version>
     <Authors>Diego Ponce de Leon, Daniel Galvão</Authors>
     <Company>atypical-coder</Company>
     <PackageLicense>https://github.com/atypical-coder/I18N-Portable/blob/master/LICENSE</PackageLicense>
